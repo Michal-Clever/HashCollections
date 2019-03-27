@@ -1,23 +1,48 @@
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
 
-    Cords cordsFirst = new Cords(1,1);
-    Cords cordsSecond = new Cords(1,1);
+//        Cords cordsFirst = new Cords(1, 1);
+//        Cords cordsSecond = new Cords(1, 1);
+//
+//        System.out.println(cordsFirst.hashCode());
+//        System.out.println(cordsSecond.hashCode());
+//
+//        HashSet<Cords> set = new HashSet<>();
+//        set.add(cordsFirst);
+//        set.add(cordsSecond);
+//
+//        System.out.println(set.size());
+//
+//        Patient patientFirst = new Patient("Jan", "Kowwalski", "Wawa");
+//        Patient patientSecond = new Patient("Jan", "Kowwalski", "Wawa");
+//
+//        Set<Patient> setPatient = new HashSet<>();
+//        setPatient.add(patientFirst);
+//        setPatient.add(patientSecond);
 
-        System.out.println(cordsFirst.hashCode());
-        System.out.println(cordsSecond.hashCode());
+        doesHasSetReplaceWhenEquals();
+    }
 
-        HashSet<Cords> set = new HashSet<>();
-        set.add(cordsFirst);
-        set.add(cordsSecond);
+    private static void doesHasSetReplaceWhenEquals() {
+        HashSet<Person> setPerson = new HashSet<Person>();
 
-        System.out.println(set.size());
+        setPerson.add(new Person("Andrzej", "Golota", 52));
+        setPerson.add(new Person("Andrzej", "Golota", 42));
 
+        Iterator<Person> iter = setPerson.iterator();
 
+        while (iter.hasNext()) {
+
+            Person someone = iter.next();
+            System.out.println(someone.getAge());
+        }
 
     }
+
 }
 // od Java 7:
 // hashCode
