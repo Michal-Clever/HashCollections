@@ -35,9 +35,20 @@ public class Main {
 
         Iterator<Person> iter = setPerson.iterator();
 
-        while (iter.hasNext()) {
+//        // it won't work
+//        for (Person person : setPerson) {
+//            if(person.getAge()==42){
+//                setPerson.remove(person);
+//            }
+//        }
 
+        while (iter.hasNext()) {
             Person someone = iter.next();
+            //here the removal will work
+            if (someone.getAge() == 42) {
+                iter.remove();
+            }
+
             System.out.println(someone.getAge());
         }
 
