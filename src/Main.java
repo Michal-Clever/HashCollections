@@ -42,6 +42,7 @@ public class Main {
 //            }
 //        }
 
+        System.out.println(setPerson.size());
         while (iter.hasNext()) {
             Person someone = iter.next();
             //here the removal will work
@@ -51,6 +52,7 @@ public class Main {
 
             System.out.println(someone.getAge());
         }
+        System.out.println(setPerson.size());
 
     }
 
