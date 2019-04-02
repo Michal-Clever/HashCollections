@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -33,15 +34,21 @@ public class Main {
         setPerson.add(new Person("Andrzej", "Golota", 52));
         setPerson.add(new Person("Andrzej", "Golota", 42));
 
-        Iterator<Person> iter = setPerson.iterator();
+        System.out.println(setPerson.iterator().next().getAge());
 
-//        // it won't work
+      //  HashMap<Person,String>
+
+        // iteratorExample(setPerson);
+    }
+
+    private static void iteratorExample(HashSet<Person> setPerson) {
+        //        // it won't work
 //        for (Person person : setPerson) {
 //            if(person.getAge()==42){
 //                setPerson.remove(person);
 //            }
 //        }
-
+        Iterator<Person> iter = setPerson.iterator();
         System.out.println(setPerson.size());
         while (iter.hasNext()) {
             Person someone = iter.next();
@@ -53,7 +60,6 @@ public class Main {
             System.out.println(someone.getAge());
         }
         System.out.println(setPerson.size());
-
     }
 
 }
